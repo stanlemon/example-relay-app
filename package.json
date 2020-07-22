@@ -1,40 +1,40 @@
 {
-  "name": "relay-app",
-  "private": true,
-  "version": "0.0.1",
-  "description": "A test app using relay.",
-  "main": "src/index.js",
-  "scripts": {
-    "start": "parcel index.html",
-    "lint": "eslint --ext .jsx --ext .js src/**",
-    "relay": "relay-compiler --src ./src --schema ./schema/schema.graphql --extensions js jsx",
-    "graphql": "postgraphile -c postgres:///test --export-schema-graphql ./schema/schema.graphql -a"
-  },
-  "author": "Stan Lemon <stanlemon@users.noreply.github.com>",
-  "license": "MIT",
-  "dependencies": {
-    "react": "^16.7.0",
-    "react-dom": "^16.7.0",
-    "react-relay": "^1.7.0",
-    "relay": "^0.8.0-1"
-  },
-  "devDependencies": {
-    "@babel/core": "^7.2.2",
-    "@babel/plugin-proposal-class-properties": "^7.2.3",
-    "@babel/preset-react": "^7.0.0",
-    "babel-eslint": "^10.0.1",
-    "babel-plugin-relay": "^1.7.0",
-    "eslint": "^5.12.1",
-    "eslint-config-prettier": "^3.5.0",
-    "eslint-config-react-app": "^3.0.6",
-    "eslint-plugin-flowtype": "^3.2.1",
-    "eslint-plugin-import": "^2.14.0",
-    "eslint-plugin-jsx-a11y": "^6.1.2",
-    "eslint-plugin-react": "^7.12.4",
-    "graphql": "^14.1.1",
-    "parcel-bundler": "^1.12.4",
-    "postgraphile": "^4.2.0",
-    "relay-compiler": "^1.7.0",
-    "relay-devtools": "^1.4.0"
-  }
+    "name": "relay-app",
+    "private": true,
+    "version": "0.0.1",
+    "description": "A test app using relay.",
+    "main": "src/index.js",
+    "scripts": {
+        "start": "parcel index.html",
+        "lint": "eslint --ext .jsx --ext .js src/**",
+        "relay": "relay-compiler --src ./src --schema ./schema/schema.graphql --extensions js jsx",
+        "graphql": "postgraphile -c postgres:///test --export-schema-graphql ./schema/schema.graphql -a"
+    },
+    "author": "Stan Lemon <stanlemon@users.noreply.github.com>",
+    "license": "MIT",
+    "dependencies": {
+        "react": "^16.13.1",
+        "react-dom": "^16.13.1",
+        "react-relay": "^1.7.0",
+        "relay": "^0.8.0-1"
+    },
+    "devDependencies": {
+        "@babel/core": "^7.10.5",
+        "@babel/plugin-proposal-class-properties": "^7.10.4",
+        "@babel/preset-react": "^7.10.4",
+        "babel-eslint": "^10.1.0",
+        "babel-plugin-relay": "^1.7.0",
+        "eslint": "^7.5.0",
+        "eslint-config-prettier": "^6.11.0",
+        "eslint-config-react-app": "^5.2.1",
+        "eslint-plugin-flowtype": "^5.2.0",
+        "eslint-plugin-import": "^2.22.0",
+        "eslint-plugin-jsx-a11y": "^6.3.1",
+        "eslint-plugin-react": "^7.20.3",
+        "eslint-plugin-react-hooks": "^4.0.8",
+        "graphql": "^14.1.1",
+        "parcel-bundler": "^1.12.4",
+        "postgraphile": "^4.7.0",
+        "relay-compiler": "^1.7.0"
+    }
 }
