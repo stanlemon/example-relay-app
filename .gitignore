@@ -2,4 +2,3 @@ node_modules/
 __generated__/
 .cache/
 dist/
-schema/
