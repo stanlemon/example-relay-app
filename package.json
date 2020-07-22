@@ -8,7 +8,7 @@
         "start": "parcel index.html",
         "lint": "eslint --ext .jsx --ext .js src/**",
         "relay": "relay-compiler --src ./src --schema ./schema/schema.graphql --extensions js jsx",
-        "graphql": "postgraphile -c postgres:///test --export-schema-graphql ./schema/schema.graphql -a"
+        "graphql": "postgraphile --cors -c postgres:///test --export-schema-graphql ./schema/schema.graphql -a"
     },
     "author": "Stan Lemon <stanlemon@users.noreply.github.com>",
     "license": "MIT",
@@ -16,7 +16,8 @@
         "react": "^16.13.1",
         "react-dom": "^16.13.1",
         "react-relay": "^1.7.0",
-        "relay": "^0.8.0-1"
+        "relay": "^0.8.0-1",
+        "relay-devtools": "^1.4.0"
     },
     "devDependencies": {
         "@babel/core": "^7.10.5",

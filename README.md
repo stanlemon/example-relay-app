@@ -15,13 +15,10 @@ The app depends on a single table called 'person', the sql to create the table i
 ```sql
 DROP TABLE IF EXISTS "public"."person";
 CREATE TABLE "public"."person" (
-	"id" int4 NOT NULL DEFAULT nextval('person_id_seq'::regclass),
+	"id" SERIAL PRIMARY KEY,
 	"first_name" varchar(50) NOT NULL COLLATE "default",
 	"last_name" varchar(50) NOT NULL COLLATE "default"
 )
-WITH (OIDS=FALSE);
-ALTER TABLE "public"."person" OWNER TO "postgres";
-ALTER TABLE "public"."person" ADD PRIMARY KEY ("id") NOT DEFERRABLE INITIALLY IMMEDIATE;
 ```
 
 If you would like to use a different database or user, you can either edit the `graphql` command in `package.json` or run PostGraphile yourself from this apps working directory, like so:
