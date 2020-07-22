@@ -16,8 +16,7 @@
         "react": "^16.13.1",
         "react-dom": "^16.13.1",
         "react-relay": "^1.7.0",
-        "relay": "^0.8.0-1",
-        "relay-devtools": "^1.4.0"
+        "relay": "^0.8.0-1"
     },
     "devDependencies": {
         "@babel/core": "^7.10.5",
