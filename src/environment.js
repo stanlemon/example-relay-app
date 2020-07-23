@@ -1,25 +1,21 @@
-import { Environment, Network, RecordSource, Store } from 'relay-runtime'
-
-import { installRelayDevTools } from 'relay-devtools'
-
-installRelayDevTools()
+import { Environment, Network, RecordSource, Store } from "relay-runtime";
 
 function fetchQuery(operation, variables) {
-    return fetch('http://localhost:5000/graphql', {
-        method: 'POST',
-        headers: {
-            'Content-Type': 'application/json',
-        },
-        body: JSON.stringify({
-            query: operation.text,
-            variables,
-        }),
-    }).then(response => {
-        return response.json()
-    })
+  return fetch("http://localhost:5000/graphql", {
+    method: "POST",
+    headers: {
+      "Content-Type": "application/json",
+    },
+    body: JSON.stringify({
+      query: operation.text,
+      variables,
+    }),
+  }).then((response) => {
+    return response.json();
+  });
 }
 
 export const environment = new Environment({
-    network: Network.create(fetchQuery),
-    store: new Store(new RecordSource()),
-})
+  network: Network.create(fetchQuery),
+  store: new Store(new RecordSource()),
+});
