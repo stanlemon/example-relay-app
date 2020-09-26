@@ -5,7 +5,7 @@
   "description": "A test app using relay.",
   "main": "src/index.js",
   "scripts": {
-    "start": "parcel index.html",
+    "start": "webpack-dev-server",
     "lint": "eslint --ext .jsx --ext .js src/**",
     "prettier": "prettier --write ./src/ ",
     "relay": "relay-compiler --src ./src --schema ./schema/schema.graphql --extensions js jsx",
@@ -25,25 +25,35 @@
     "not and_qq < 1000"
   ],
   "dependencies": {
+    "@hot-loader/react-dom": "^17.0.0-rc.2",
     "postgraphile": "^4.7.0",
     "react": "^16.13.1",
     "react-dom": "^16.13.1",
+    "react-hot-loader": "^4.13.0",
     "react-relay": "^10.0.0"
   },
   "devDependencies": {
     "@babel/core": "^7.10.5",
     "@babel/plugin-proposal-class-properties": "^7.10.4",
+    "@babel/preset-env": "^7.11.5",
     "@babel/preset-react": "^7.10.4",
     "babel-eslint": "^10.1.0",
+    "babel-loader": "^8.1.0",
     "babel-plugin-relay": "^10.0.0",
+    "css-loader": "^4.3.0",
     "eslint": "^7.5.0",
     "eslint-config-prettier": "^6.11.0",
     "eslint-plugin-import": "^2.22.0",
     "eslint-plugin-prettier": "^3.1.4",
     "eslint-plugin-react": "^7.20.3",
     "graphql": "^14.7.0 <15.0.0",
-    "parcel-bundler": "^1.12.4",
+    "html-webpack-plugin": "^4.5.0",
     "prettier": "^2.0.5",
-    "relay-compiler": "^10.0.0"
+    "relay-compiler": "^10.0.0",
+    "style-loader": "^1.2.1",
+    "url-loader": "^4.1.0",
+    "webpack": "^4.44.2",
+    "webpack-cli": "^3.3.12",
+    "webpack-dev-server": "^3.11.0"
   }
 }
