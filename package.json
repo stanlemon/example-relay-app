@@ -10,7 +10,7 @@
     "lint": "eslint --ext .jsx --ext .js src/**",
     "prettier": "prettier --write ./src/ ",
     "relay": "relay-compiler --src ./src --schema ./schema/schema.graphql --extensions js jsx",
-    "graphql": "postgraphile --cors -c postgres:///test --export-schema-graphql ./schema/schema.graphql -a"
+    "graphql": "postgraphile --cors --export-schema-graphql ./schema/schema.graphql -a"
   },
   "author": "Stan Lemon <stanlemon@users.noreply.github.com>",
   "license": "MIT",
