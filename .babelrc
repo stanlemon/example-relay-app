@@ -1,4 +1,22 @@
 {
-  "presets": ["@babel/preset-env", "@babel/preset-react"],
-  "plugins": ["relay", "@babel/plugin-proposal-class-properties"]
+  "presets": [
+    ["@babel/preset-env", {
+      "targets": {
+        "browsers": [
+          "last 2 years",
+          "not edge<79",
+          "not opera<1000",
+          "not operamobile<10000",
+          "not and_qq<1000",
+          "not Samsung<1000"
+        ]
+      }
+    }],
+    "@babel/preset-react"
+  ],
+  "plugins": [
+    "react-hot-loader/babel",
+    "relay", 
+    "@babel/plugin-proposal-class-properties"
+  ]
 }
